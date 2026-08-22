@@ -1,4 +1,6 @@
 module.exports = {
+  pathPrefix: `/omgportfolio`,
+
   // Remove pathPrefix for custom domain setup
   //
   // NOTE: This file runs in Node at build time so it can't consume the
