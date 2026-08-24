@@ -67,3 +67,22 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Gatsby generated output
+/*.html
+/*-*.js
+/*.js.map
+/*.css
+/*.webmanifest
+/chunk-map.json
+/webpack.stats.json
+/page-data/
+/_gatsby/
+/~partytown/
+/icons/
+/resume/
+/work/
+/static/
+/404/
+/favicon-32x32.png
+/*.LICENSE.txt
