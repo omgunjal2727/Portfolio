@@ -39,7 +39,8 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        path: ./public
+        with:
+          path: ./public
 
   deploy:
     environment:
