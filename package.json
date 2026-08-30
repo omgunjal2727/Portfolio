@@ -36,7 +36,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "deploy": "gatsby build --prefix-paths && powershell -Command \"New-Item -ItemType File -Path public\\.nojekyll -Force -ErrorAction 	SilentlyContinue; Set-Location public; git init; git checkout -B gh-pages; git add -A; git commit -m 'Deploy site'; git remote add 	origin https://github.com/Saiom2727/omgportfolio.git; git push -f origin gh-pages; Set-Location ..; Remove-Item -Recurse -Force 	public\\.git -ErrorAction SilentlyContinue\"",
+    "deploy": "gatsby build --prefix-paths && powershell -Command \"New-Item -ItemType File -Path public\\.nojekyll -Force -ErrorAction SilentlyContinue; Set-Location public; git init; git checkout...",
     "build": "gatsby build",
     "develop": "gatsby develop --host=0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
