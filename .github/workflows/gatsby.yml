@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "18"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -35,6 +35,7 @@ jobs:
       - name: Build site
         run: npm run build
         env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
           PREFIX_PATHS: 'true'
 
       - name: Upload artifact
