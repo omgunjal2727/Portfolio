@@ -36,6 +36,7 @@
   ],
   "license": "0BSD",
   "scripts": {
+<<<<<<< HEAD
     "deploy": "gatsby build --prefix-paths && powershell -Command \"New-Item -ItemType File -Path public\\.nojekyll -Force -ErrorAction SilentlyContinue; Set-Location public; git init; git checkout...",
     "build": "gatsby build",
     "develop": "gatsby develop --host=0.0.0.0",
@@ -45,6 +46,17 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
+=======
+  "deploy": "gatsby build --prefix-paths && powershell -Command \"New-Item -ItemType File -Path public\\.nojekyll -Force -ErrorAction SilentlyContinue; Set-Location public; git init; git checkout -B gh-pages; git add -A; git commit -m 'Deploy site'; git remote add origin https://github.com/Saiom2727/omgportfolio.git; git push -f origin gh-pages; Set-Location ..; Remove-Item -Recurse -Force public\\.git -ErrorAction SilentlyContinue\"",
+  "build": "gatsby build",
+  "develop": "gatsby develop --host=0.0.0.0",
+  "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+  "start": "npm run develop",
+  "serve": "gatsby serve",
+  "clean": "gatsby clean",
+  "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+},
+>>>>>>> f09dcbd (Save local website files)
   "repository": {
     "type": "git",
     "url": "https://github.com/stevenf7/stevenf7.github.io/"

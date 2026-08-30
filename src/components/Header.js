@@ -3,7 +3,7 @@ import Fade from "./animations/Fade"
 import { useLanguage } from "../contexts/LanguageContext"
 import data, { getText } from "../data"
 import { Typewriter } from "react-simple-typewriter"
-import imgUrl from "../images/OmTrophy.webp"
+import imgUrl from "../images/OmMain.jpg"
 
 const Header = () => {
   const { language } = useLanguage();
@@ -45,6 +45,9 @@ const Header = () => {
     }
   }, []);
 
+  // 15-20% Transparent Black Overlay Gradient
+  const darkOverlayGradient = "linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.45))";
+
   if (isIOS) {
     return (
       <div className="section" id="home">
@@ -53,7 +56,7 @@ const Header = () => {
             <div 
               className="ios-background" 
               style={{
-                backgroundImage: `linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.2)),url(${imgUrl})`,
+                backgroundImage: `${darkOverlayGradient}, url(${imgUrl})`,
               }}
             />
             
@@ -68,7 +71,7 @@ const Header = () => {
                 <div className="heading-wrapper">
                   <h1>
                     {getText({ en: "I am a", zh: "我是一名" }, language)}{" "}
-                    <span style={{ color: "red", fontWeight: "bold" }}>
+                    <span style={{ color: "#ff4d4d", fontWeight: "bold" }}>
                       <Typewriter
                         loop
                         cursor
@@ -113,10 +116,7 @@ const Header = () => {
         <div 
           className={`header-wrapper ${isLandscape ? 'landscape' : 'portrait'} ${isDesktop ? 'desktop' : 'mobile'}`}
           style={{
-            backgroundImage:
-              "linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.2)),url(" +
-              imgUrl +
-              ")",
+            backgroundImage: `${darkOverlayGradient}, url(${imgUrl})`,
           }}
         >
           <Fade bottom>
@@ -129,7 +129,7 @@ const Header = () => {
             <div className="heading-wrapper">
               <h1>
                 {getText({ en: "I am a", zh: "我是一名" }, language)}{" "}
-                <span style={{ color: "red", fontWeight: "bold" }}>
+                <span style={{ color: "#ff4d4d", fontWeight: "bold" }}>
                   <Typewriter
                     loop
                     cursor

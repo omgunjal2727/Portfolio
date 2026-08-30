@@ -3,30 +3,45 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import data from "../data"
+
 // Components
 import Header from "../components/Header"
-import Work from "../components/Work"
 import About from "../components/about"
+import NVIDIA from "../components/NVIDIA"           // Featured Projects Carousel
+import Publications from "../components/Publications" // Achievements & Other Projects Grid
+import Work from "../components/Work"                // Work & Research Experience
+import Memories from "../components/Memories"        // Memories Photo Grid
 import Skills from "../components/skills"
 import Footer from "../components/Footer"
-import Project from "../components/projects"
-import Nvidia from "../components/NVIDIA"
-import Education from "../components/Education"
-import Publications from "../components/Publications"
 
 const IndexPage = () => (
   <Layout>
     {/* eslint-disable-next-line react/jsx-pascal-case */}
     <SEO title={data.seo.title} description={data.seo.description} />
-    <Header></Header>
-    <About></About>
-    <Nvidia></Nvidia>
-    <Education></Education>
-    <Publications></Publications>
-    <Work></Work>
-    <Project></Project>
-    <Skills></Skills>
-    <Footer></Footer>
+    
+    {/* 1. Hero / Header */}
+    <Header />
+    
+    {/* 2. About Me */}
+    <About />
+    
+    {/* 3. Featured Projects Carousel */}
+    <NVIDIA />
+    
+    {/* 4. Achievements & Other Projects Grid */}
+    <Publications />
+    
+    {/* 5. Work & Research Experience */}
+    <Work />
+    
+    {/* 6. Collection of Memories */}
+    <Memories />
+    
+    {/* 7. Technical Skills */}
+    <Skills />
+    
+    {/* 8. Contact / Footer */}
+    <Footer />
   </Layout>
 )
 

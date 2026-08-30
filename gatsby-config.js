@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/omgportfolio`,
+  pathPrefix: `/Portfolio`,
 
   // Remove pathPrefix for custom domain setup
   //
