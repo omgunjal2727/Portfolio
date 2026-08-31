@@ -1,22 +1,18 @@
 import React from "react"
 import { withPrefix } from "gatsby"
-import LanguageToggle from "./LanguageToggle"
 import { useLanguage } from "../contexts/LanguageContext"
 import data, { getText } from "../data"
 
 const Navbar = () => {
   const { language } = useLanguage();
   
-  // Smooth scroll directly on homepage, or redirect cleanly if on /resume page
   const scrollToSection = (sectionId) => {
     if (typeof window !== 'undefined') {
       const isResumePage = window.location.pathname.includes('/resume');
       
       if (isResumePage) {
-        // Return to homepage with pathPrefix and section anchor
-        window.location.href = withPrefix(`/?lang=${language}#${sectionId}`);
+        window.location.href = withPrefix(`/#${sectionId}`);
       } else {
-        // Smooth scroll directly to section
         const element = document.getElementById(sectionId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
@@ -29,7 +25,7 @@ const Navbar = () => {
 
   const handleResumeClick = () => {
     if (typeof window !== 'undefined') {
-      window.location.href = withPrefix(`/resume?lang=${language}`);
+      window.location.href = withPrefix('/resume');
     }
   };
 
@@ -59,7 +55,6 @@ const Navbar = () => {
             <button onClick={() => scrollToSection('contact')} type="button">
               {getText(data.nav.contact, language)}
             </button>
-            <LanguageToggle />
           </div>
         </div>
       </div>
