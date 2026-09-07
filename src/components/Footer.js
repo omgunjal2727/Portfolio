@@ -36,9 +36,13 @@ const Footer = () => {
           </Fade>
           <Fade bottom>
             <span>
-              {getText(data.footer.madeBy, language)}{" "}
-              <a href="https://www.linkedin.com/in/omgunjalmtt/" target="_blank" rel="noopener noreferrer">
-                {getText(data.name, language)}
+              Made by{" "}
+              <a 
+                href="https://www.linkedin.com/in/sai-gunjal-8ab2ba375" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Sai Sanjay Gunjal
               </a>
             </span>
           </Fade>

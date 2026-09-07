@@ -9,7 +9,7 @@ import "../styles/NVIDIA.scss"
 import gr1ImitationVideo from "./../images/nvidia/DextSimHandVid.mp4"
 import h1FlipGif from "./../images/nvidia/h1_Flip.mp4"
 import h1TrainVideo from "./../images/nvidia/h1_Train.mp4"
-import urLousdVideo from "./../images/publications/dextraa.mp4"
+import urLousdVideo from "./../images/publications/ur_lousd.mp4"
 import capstoneVideo from "./../images/ProjectPhotos/robocon25.mp4"
 
 const NVIDIA = () => {
@@ -74,16 +74,19 @@ const NVIDIA = () => {
             >
               {carouselItems.map((item, index) => (
                 <Carousel.Item key={index}>
-                  <video
-                    ref={el => videoRefs.current[index] = el}
-                    className="d-block w-100"
-                    src={item.media}
-                    autoPlay={index === 0}
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  />
+                  {/* RIGID FIXED FRAME WRAPPER (Solid Black Background) */}
+                  <div className="carousel-media-frame">
+                    <video
+                      ref={el => videoRefs.current[index] = el}
+                      className="carousel-fixed-media"
+                      src={item.media}
+                      autoPlay={index === 0}
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    />
+                  </div>
                   <Carousel.Caption className="carousel-caption">
                     <h3>{item.title}</h3>
                     <p style={{ fontWeight: "600", marginBottom: "4px" }}>{item.subtitle}</p>

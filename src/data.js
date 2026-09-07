@@ -197,9 +197,9 @@ const siteData = {
       title: "FPL AI-Powered Squad Optimizer",
       subtitle: "XGBoost, Gemini NLP Analysis & PuLP Integer Linear Programming",
       imageSrc: "webappImg",
-      projectLink: "https://github.com/omgunjal2727",
+      projectLink: null, // Set to null so button matches other cards
       type: "AI / ML"
-    },
+    },,
     
     {
       id: 2,
