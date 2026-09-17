@@ -1,0 +1,118 @@
+#nvidia .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px !important;
+  
+  @media (max-width: 768px) {
+    padding: 0 24px !important;
+  }
+  @media (max-width: 480px) {
+    padding: 0 16px !important;
+  }
+  
+  h1 {
+    margin-top: 0.5rem;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .nvidia-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .nvidia-carousel {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+/* FIXED RECTANGLE MEDIA FRAME */
+.carousel-media-frame {
+  width: 100% !important;
+  height: 480px !important; /* Locked height on desktop */
+  background-color: #000000 !important; /* Solid black padding */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+
+  @media (max-width: 992px) {
+    height: 400px !important;
+  }
+
+  @media (max-width: 768px) {
+    height: 320px !important;
+  }
+
+  @media (max-width: 480px) {
+    height: 260px !important;
+  }
+}
+
+/* Media fits perfectly inside the frame without altering outer dimensions */
+.carousel-fixed-media {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important; /* Keeps original aspect ratio with black letterboxing */
+  object-position: center !important;
+  background-color: #000000 !important;
+}
+
+.carousel-caption {
+  font-family: "Montserrat", sans-serif !important;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  width: 75%;
+  max-width: 650px;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 10px 14px;
+    bottom: 3%;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: #ffffff;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+      font-size: 0.88rem;
+    }
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+    }
+  }
+}

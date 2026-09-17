@@ -10,19 +10,21 @@
   margin-bottom: 16px !important;
   border-radius: 14px !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background-color: #0d0e12 !important; /* Dark backdrop for crisp logo display */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4) !important;
   transition: all 400ms ease-in-out !important;
   
-  /* Restored to original full-cover styling */
+  /* PREVENTS LOGOS FROM STRETCHING OR DISTORTING */
   .background-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover !important;
+    background-size: contain !important; /* Maintains 100% natural logo aspect ratio */
     background-repeat: no-repeat !important;
     background-position: center !important;
+    background-color: #0d0e12 !important;
     border-radius: 14px !important;
     transition: transform 400ms ease-in-out;
     z-index: 1;
@@ -37,6 +39,7 @@
     border-radius: 14px !important;
     overflow: hidden;
     z-index: 1;
+    background-color: #0d0e12;
     
     .background-video-element {
       position: absolute;

@@ -17,30 +17,10 @@ const Footer = () => {
           <Fade bottom distance="20px" delay={300} duration={1000}>
             <h2>{getText(data.contactSubHeading, language)}</h2>
           </Fade>
-          
           <Fade bottom>
-            {/* Contact Details: Email, Call & WhatsApp */}
-            <div className="contact-info">
-              <a className="contact-item email-link" href={`mailto:${data.contactEmail}`}>
-                ✉️ {data.contactEmail}
-              </a>
-
-              <div className="contact-phone-group">
-                <a className="contact-item" href="tel:+919561912727">
-                  📞 +91 9561912727
-                </a>
-                <span className="contact-divider">•</span>
-                <a 
-                  className="contact-item whatsapp-btn" 
-                  href="https://wa.me/919561912727" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  💬 WhatsApp Chat
-                </a>
-              </div>
-            </div>
-
+            <a className="email-link" href={`mailto:${data.contactEmail}`}>
+              {data.contactEmail}
+            </a>
             <div className="social-icons">
               {data.social.map((socialLink, index) => (
                 <a
@@ -49,14 +29,13 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={socialLink.img} alt="icons" loading="lazy" />
+                  <img src={socialLink.img} alt="icons" loading="lazy"></img>
                 </a>
               ))}
             </div>
           </Fade>
-          
           <Fade bottom>
-            <span className="made-by-text">
+            <span>
               Made by{" "}
               <a 
                 href="https://www.linkedin.com/in/sai-gunjal-8ab2ba375" 

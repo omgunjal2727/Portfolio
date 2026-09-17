@@ -9,18 +9,18 @@ html {
 
 @import "./include-media.scss";
 
-// Active Atoms & Components with Clean Names
+// Atoms & Components
 @import "./card.scss";
 @import "./navbar.scss";
 @import "./header.scss";
-@import "./featuredGrid.scss";
-@import "./featuredCarousel.scss";
-@import "./achievements.scss";
 @import "./work.scss";
-@import "./memories.scss";
-@import "./skills.scss";
 @import "./about.scss";
+@import "./skills.scss";
 @import "./footer.scss";
+@import "./projects.scss";
+@import "./education.scss";
+@import "./languageToggle.scss";
+@import "./memories.scss";
 @import "./../css/resume.scss";
 @import "./../css/worksiteStyle.scss";
 
@@ -53,13 +53,13 @@ p, span, div, a, li, button,
 
 /* Standardized, comfortable header spacing */
 section h1, .section h1, .container h1 {
-  margin-top: 0.5rem !important;
+  margin-top: 0.5rem !important; /* Reduced from 3rem to eliminate top gaps */
   margin-bottom: 1rem !important;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
 /* ======================================================
-   SECTION SPACING
+   SECTION SPACING FIX (Comfortable gap between sections)
    ====================================================== */
 .section {
   width: 100vw;
@@ -67,7 +67,7 @@ section h1, .section h1, .container h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.2rem 0 !important;
+  padding: 2.2rem 0 !important; /* Reduced from 4.5rem to 2.2rem for tight flow */
   
   &:not(#home) {
     padding-left: 32px;

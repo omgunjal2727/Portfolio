@@ -1,0 +1,46 @@
+.education-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px;
+  
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+  
+  .grid {
+    display: grid;
+    margin-top: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    width: 100%;
+    align-items: stretch;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Dark Glassmorphism Cards */
+  .education-card {
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    color: #ffffff !important;
+
+    h1, h2, h3, p {
+      color: #ffffff !important;
+    }
+  }
+}
