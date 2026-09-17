@@ -8,9 +8,9 @@ const Navbar = () => {
   
   const scrollToSection = (sectionId) => {
     if (typeof window !== 'undefined') {
-      const isResumePage = window.location.pathname.includes('/resume');
+      const isWorkOrResumePage = window.location.pathname.includes('/work/') || window.location.pathname.includes('/resume');
       
-      if (isResumePage) {
+      if (isWorkOrResumePage) {
         window.location.href = withPrefix(`/#${sectionId}`);
       } else {
         const element = document.getElementById(sectionId);
@@ -43,14 +43,20 @@ const Navbar = () => {
             <button onClick={() => scrollToSection('home')} type="button">
               {getText(data.nav.home, language)}
             </button>
-            <button onClick={() => scrollToSection('featured-projects')} type="button">
+            <button onClick={() => scrollToSection('featured-grid')} type="button">
               {getText(data.nav.featured, language)}
             </button>
             <button onClick={() => scrollToSection('achievements')} type="button">
               {getText(data.nav.achievements, language)}
             </button>
+            <button onClick={() => scrollToSection('experience')} type="button">
+              {getText(data.nav.experience, language)}
+            </button>
             <button onClick={() => scrollToSection('memories')} type="button">
               {getText(data.nav.memories, language)}
+            </button>
+            <button onClick={() => scrollToSection('about')} type="button">
+              {getText(data.nav.about, language)}
             </button>
             <button onClick={() => scrollToSection('contact')} type="button">
               {getText(data.nav.contact, language)}
